@@ -1,1 +1,66 @@
-h1 Hi there
+extends ./layout
+
+block head
+  title= title
+
+  // Viewport mobile tag for sensible mobile support
+  meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
+  script(type="text/javascript", src="third-party/angular/angular.js")
+  script(type="text/javascript", src="third-party/angular-strap/dist/angular-strap.min.js")
+  script(type="text/javascript", src="third-party/angular-strap/dist/angular-strap.tpl.min.js")
+  link(rel="stylesheet", type="text/css", href="styles/importer.css")
+
+block panel
+  nav.navbar.navbar-default(role="navigation")
+    .container-fluid
+      .navbar-header
+        button.navbar-toggle(type="button", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1")
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href="#") MapMap
+      div#bs-example-navbar-collapse-1.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li.active
+            a(href="#") Hilfe
+          li
+            a(href="#") Über
+          //- li.dropdown
+          //-   a(href="#", data-toggle="dropdown").dropdown-toggle
+          //-     | Dropdown
+          //-     span.caret
+          //-   ul.dropdown-menu(role="menu")
+          //-     li
+          //-       a(href="#") Action
+          //-     li
+          //-       a(href="#") Another action
+          //-     li
+          //-       a(href="#") Something else here
+          //-     li.divider
+          //-     li
+          //-       a(href="#") Separated link
+          //-     li.divider
+          //-     li
+          //-       a(href="#") One more separated link
+        form.navbar-form.navbar-left(role="search")
+          .form-group
+            input.form-control(type="text", placeholder="Search", ng-model="testModel")
+          button.btn.btn-default(type="submit") {{testModel}}
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href="#") Link
+          li.dropdown
+            a(href="#", data-toggle="dropdown").dropdown-toggle
+              | Dropdown 
+              span.caret
+            ul.dropdown-menu(role="menu", bs-dropdown)
+              li
+                a(href="#") Action
+              li
+                a(href="#") Another action
+              li
+                a(href="#") Something else here
+              li.divider
+              li
+                a(href="#") Separated link
