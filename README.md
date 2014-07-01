@@ -1,4 +1,3 @@
-mapmap
-======
+# mapmap
 
-Create and share maps in real time
+a [Sails](http://sailsjs.org) application
